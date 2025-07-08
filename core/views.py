@@ -4,17 +4,14 @@ import matplotlib.pyplot as plt
 import datetime as dt
 import yfinance as yf
 import os
-
+import joblib
 from django.shortcuts import render
-from keras.models import load_model 
-from sklearn.preprocessing import MinMaxScaler
+from keras.models import load_model
 
 # Load model once at startup
 from django.conf import settings
 MODEL_PATH = os.path.join(settings.BASE_DIR, 'core', 'Model', 'lstm_model.keras')
 model = load_model(MODEL_PATH)
-
-import joblib
 
 SCALER_PATH = os.path.join(settings.BASE_DIR, 'core', 'Model', 'scaler.pkl')
 scaler = joblib.load(SCALER_PATH)
@@ -49,8 +46,9 @@ def index(request):
         data_training = pd.DataFrame(df['Close'][:int(len(df) * 0.70)])
         data_testing = pd.DataFrame(df['Close'][int(len(df) * 0.70):])
 
-        # Scaling
-        data_training_array = scaler.fit_transform(data_training)
+        # Scaling        
+        data_training_array = scaler.transform(data_training)
+
 
         # Prepare input for model
         past_100 = data_training.tail(100)
