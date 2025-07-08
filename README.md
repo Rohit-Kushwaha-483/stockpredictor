@@ -75,15 +75,13 @@ Then open your browser and navigate to http://127.0.0.1:8000.
 - INFY.NS
 - AAPL (Apple Inc.)
 - MSFT (Microsoft)
+
 | Note: Use .NS suffix for Indian stocks from NSE.
 
 ---
 
-### ⚠️ Disclaimer
-
-<div style="border: 1px solid #f5c6cb; background-color: #f8d7da; padding: 15px; border-radius: 5px; color: #721c24; font-family: Arial, sans-serif;">
-  <strong>This application is intended for educational and research purposes only.</strong><br><br>
-  Predictions provided by this tool are based on historical stock data and a machine learning model.<br>
-  They are <strong>not guaranteed to be accurate</strong> and <strong>should not be used</strong> for real-world trading or investment decisions.<br>
-  <strong>Please do not rely</strong> on this application for financial gains — always consult a certified financial advisor before making investment choices.
-</div>
+> ⚠️ **Disclaimer**  
+> This application is intended for **educational and research purposes only**.  
+> Predictions provided by this tool are based on historical stock data and a machine learning model.  
+> They are **not guaranteed to be accurate** and **should not be used** for real-world trading or investment decisions.  
+> **Please do not rely** on this application for financial gains — always consult a certified financial advisor before making investment choices.
